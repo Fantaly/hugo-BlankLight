@@ -25,8 +25,33 @@ h6 {
     color: var(--primary);
 }
 
+@font-face {
+    font-family: 'Medium';
+    src: url('/fonts/Medium.otf') format('opentype');
+    font-weight: 500, 600, medium;
+    font-style: normal;
+}
+
+/* Light font */
+
+@font-face {
+    font-family: 'Light';
+    src: url('/fonts/Light.otf') format('opentype');
+    font-weight: 300, 400, light, lighter;
+    font-style: normal;
+}
+
+/* Bold font */
+
+@font-face {
+    font-family: 'Bold';
+    src: url('/fonts/Bold.otf') format('opentype');
+    font-weight: 700, 800, bold, bolder;
+    font-style: normal;
+}
+
 body {
-    font-family: "Inter Tight", sans-serif;
+    font-family: sans-serif;
     font-size: 16px;
     line-height: 1.6;
     word-break: break-word;
@@ -53,6 +78,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'Bold';
     line-height: 1.2;
 }
 

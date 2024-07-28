@@ -66,9 +66,12 @@
 <article class="{{ $class }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  <footer class="entry-footer">
+    Published on {{ partial "post_meta.html" . }}
+  </footer>
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      {{- .Title }}
+      {{- .Title }} 
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
@@ -85,9 +88,7 @@
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
-  </footer>
+
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>

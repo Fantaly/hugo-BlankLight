@@ -6,6 +6,7 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
+    /* border-bottom: 1px solid var(--border); */
 }
 
 .nav a {
@@ -23,8 +24,9 @@
 }
 
 .logo a {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 100;
+    /* font-family: 'Light'; */
 }
 
 .logo a img, .logo a svg {
