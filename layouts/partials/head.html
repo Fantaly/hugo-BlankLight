@@ -80,6 +80,7 @@
 {{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- $license_js := resources.Get "js/license.js" }}
+
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $license_js $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
@@ -88,6 +89,15 @@
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
 {{- end }}
 {{- end -}}
+
+{{- /* Include Custom JavaScript */}}
+{{- $custom_js := resources.Get "js/fadeEffect.js" | resources.Minify }}
+{{- if not site.Params.assets.disableFingerprinting }}
+{{- $custom_js := $custom_js | fingerprint }}
+<script defer crossorigin="anonymous" src="{{ $custom_js.RelPermalink }}" integrity="{{ $custom_js.Data.Integrity }}"></script>
+{{- else }}
+<script defer crossorigin="anonymous" src="{{ $custom_js.RelPermalink }}"></script>
+{{- end }}
 
 {{- /* Favicons */}}
 <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">

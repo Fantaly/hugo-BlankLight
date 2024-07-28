@@ -1,14 +1,15 @@
 :root {
     --gap: 24px;
+    --list-gap: 180px;
     --date-gap: 12px;
     --content-gap: 20px;
     --nav-width: 80%;
-    --main-width: 800px;
+    --main-width: 700px;
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
 
-    
+    --theme-hover: #17e1a2;
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
     --primary: rgb(0, 0, 0);
@@ -21,7 +22,7 @@
 }
 
 .dark {
-    --theme: rgb(23, 23, 24);
+    --theme: rgb(9, 9, 9);
     --entry: rgb(46, 46, 51);
     --primary: rgb(217, 217, 230);
     --secondary: rgb(155, 156, 157);
