@@ -8,6 +8,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
+    transition: all 0.3s ease-in-out;
     background: var(--tertiary);
     border: 5px solid var(--theme);
     border-radius: var(--radius);
@@ -18,7 +19,8 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary);
+    transition: all 0.3s ease-in-out;
+    background: var(--brand);
 }
 
 ::-webkit-scrollbar:not(.highlighttable, .highlight table, .gist .highlight) {

@@ -24,9 +24,10 @@
 }
 
 .logo a {
-    font-size: 18px;
-    font-weight: 100;
-    /* font-family: 'Light'; */
+
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
 }
 
 .logo a img, .logo a svg {
@@ -64,12 +65,41 @@ body:not(.dark) #sun {
 }
 
 #menu a {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
 }
 
-#menu .active {
+#menu a:hover {
+    transition: all 0.3s ease-in-out;
+    color: var(--brand);
     font-weight: 500;
-    border-bottom: 2px solid currentColor;
+}
+
+#menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 16px;
+    background-color: currentColor;
+    transform: scaleX(0.005);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#menu a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+#menu .active {
+    color: var(--brand);
+    height: 100%;
+    font-weight: 500;
 }
 
 .lang-switch li,

@@ -7,7 +7,7 @@
 }
 
 .post-entry:hover .entry-hint-parent, .first-entry:hover .entry-hint-parent{
-    color:var(--theme-hover);
+    color:var(--brand);
     transition: all 0.4s ease-in-out;
 }
 

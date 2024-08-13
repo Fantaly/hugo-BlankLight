@@ -3,7 +3,7 @@
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
-    padding: var(--gap);
+    padding: var(--gap-top-main) 24px;
 }
 
 .page-header h1 {
@@ -31,6 +31,13 @@
 .social-icons a {
     display: inline-flex;
     padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 .social-icons a svg {
@@ -45,6 +52,7 @@ code {
 div.highlight,
 pre {
     position: relative;
+    border-radius: var(--radius);
 }
 
 .copy-code {

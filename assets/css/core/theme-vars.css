@@ -1,15 +1,17 @@
 :root {
     --gap: 24px;
-    --list-gap: 180px;
+    --gap-top-main: 56px;
+    --list-gap: 200px;
     --date-gap: 12px;
     --content-gap: 20px;
-    --nav-width: 80%;
-    --main-width: 700px;
+    --nav-width: 850px;
+    --main-width: 850px;
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
+    --brand: #3350a0;
 
-    --theme-hover: #17e1a2;
+
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
     --primary: rgb(0, 0, 0);
@@ -22,15 +24,16 @@
 }
 
 .dark {
-    --theme: rgb(9, 9, 9);
+    --brand: #17e1a2;
+    --theme: rgb(12, 12, 12);
     --entry: rgb(46, 46, 51);
-    --primary: rgb(217, 217, 230);
-    --secondary: rgb(155, 156, 157);
+    --primary: rgb(232, 232, 240);
+    --secondary: rgb(185, 185, 185);
     --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
+    --content: rgb(207, 207, 209);
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
+    --border: rgb(31, 31, 31);
 }
 
 .list {

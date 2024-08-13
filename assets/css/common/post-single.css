@@ -1,6 +1,6 @@
 .page-header,
 .post-header {
-    margin: 24px auto var(--content-gap) auto;
+    margin: calc(256px - var(--gap-top-main)) auto 256px;
 }
 
 .post-title {
@@ -32,7 +32,11 @@
     font-size: 16px;
 }
 
+
+
 .post-content {
+    opacity: 1;
+    transition: opacity 0.5s;
     color: var(--content);
 }
 
@@ -49,7 +53,7 @@
 }
 
 .post-content h2 {
-    margin: 32px auto 24px;
+    margin: 64px auto 14px;
     font-size: 32px;
 }
 
@@ -201,7 +205,7 @@
 .post-content pre code {
     display: grid;
     margin: auto 0;
-    padding: 10px;
+    padding: 16px;
     color: rgb(213, 213, 214);
     background: var(--code-block-bg) !important;
     border-radius: var(--radius);
@@ -305,6 +309,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 12px 0px;
 }
 
 .post-tags li {
@@ -320,17 +325,23 @@
 }
 
 .post-tags a {
+    font-family: 'monospace';
     display: block;
     padding: 0 14px;
-    color: var(--secondary);
-    font-size: 14px;
+    color: var(--brand);
+    font-size: 12px;
+    font-weight: 500;
     line-height: 34px;
-    background: var(--code-bg);
+    background: var(--theme);
+    border: 1px solid var(--border);
+
+    transition: all 0.25s;
 }
 
 .post-tags a:hover,
 .paginav a:hover {
     background: var(--border);
+    transition: all 0.25s;
 }
 
 .share-buttons {
@@ -406,4 +417,10 @@ h1>a>svg {
 img.in-text {
     display: inline;
     margin: auto;
+}
+
+
+.post-opacity{
+    opacity: 0.2;
+    transition: opacity 0.5s;
 }

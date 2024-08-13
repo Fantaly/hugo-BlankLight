@@ -53,7 +53,7 @@ h6 {
 body {
     font-family: sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.61;
     word-break: break-word;
     background: var(--theme);
 }
