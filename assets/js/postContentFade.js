@@ -11,8 +11,8 @@ function checkPostsVisibility() {
         const visibleHeight = Math.min(postBottom, windowHeight) - Math.max(postTop, 0);
         const postHeight = rect.height;
         
-        // Check if at least 10% of the post is visible 
-        if (visibleHeight / postHeight >= 0.1) { 
+        // Check if at least 10% of the post is visible  and user has at least scrolled once (if scrollable)
+        if (visibleHeight / postHeight >= 0.1 && window.scrollY > 0) { 
             post.classList.remove('post-opacity'); 
         } else {
             post.classList.add('post-opacity'); 

@@ -1,6 +1,6 @@
 .page-header,
 .post-header {
-    margin: calc(256px - var(--gap-top-main)) auto 256px;
+    margin: calc(280px - var(--gap-top-main)) auto 280px;
 }
 
 .post-title {
