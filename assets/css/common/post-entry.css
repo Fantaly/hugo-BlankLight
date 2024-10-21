@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     margin: var(--list-gap) 0px;
+    margin-bottom: 500px;
 }
 
 .post-entry:hover .entry-hint-parent, .first-entry:hover .entry-hint-parent{
